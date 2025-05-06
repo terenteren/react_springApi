@@ -1,0 +1,55 @@
+# === 공통 ===
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+.DS_Store
+*.swp
+*.swo
+
+# IDE 설정
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.iml
+out/
+
+# === frontend/ch1 ===
+/frontend/ch1/node_modules/
+/frontend/ch1/dist/
+/frontend/ch1/dist-ssr/
+/frontend/ch1/.next/
+/frontend/ch1/.nuxt/
+/frontend/ch1/.turbo/
+/frontend/ch1/.parcel-cache/
+/frontend/ch1/.vite/
+/frontend/ch1/.output/
+/frontend/ch1/.cache/
+/frontend/ch1/.eslintcache
+/frontend/ch1/.env
+/frontend/ch1/.env.local
+/frontend/ch1/.env.*.local
+/frontend/ch1/.env.development.local
+/frontend/ch1/.env.production.local
+/frontend/ch1/.env.test.local
+/frontend/ch1/*.local
+/frontend/ch1/package-lock.json
+/frontend/ch1/yarn.lock
+/frontend/ch1/pnpm-lock.yaml
+/frontend/ch1/coverage/
+
+# === backend(Spring) ===
+/backend/target/
+/backend/.classpath
+/backend/.project
+/backend/.settings/
+/backend/.idea/
+/backend/*.iml
+/backend/build/
+/backend/*.local
+/backend/**/*.local
+/backend/src/main/resources/application-*.properties
+!/backend/src/main/resources/application.properties

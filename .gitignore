@@ -41,15 +41,15 @@ out/
 /frontend/ch1/pnpm-lock.yaml
 /frontend/ch1/coverage/
 
-# === backend(Spring) ===
-/backend/target/
-/backend/.classpath
-/backend/.project
-/backend/.settings/
-/backend/.idea/
-/backend/*.iml
-/backend/build/
-/backend/*.local
-/backend/**/*.local
-/backend/src/main/resources/application-*.properties
-!/backend/src/main/resources/application.properties
+# === server(Spring) ===
+/server/target/
+/server/.classpath
+/server/.project
+/server/.settings/
+/server/.idea/
+/server/*.iml
+/server/build/
+/server/*.local
+/server/**/*.local
+/server/src/main/resources/application-*.properties
+!/server/src/main/resources/application.properties

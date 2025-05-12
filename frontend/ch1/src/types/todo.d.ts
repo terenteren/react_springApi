@@ -3,11 +3,18 @@ interface Todo {
   title: string;
   writer: string;
   dueDate: string | null;
-  complete: boolean;
+  completed: boolean;
 }
 
 interface TodoAdd {
   title: string;
   writer: string;
   dueDate: string | null;
+}
+
+interface TodoModify {
+  tno: number;
+  title: string;
+  dueDate: string | null;
+  completed: boolean;
 }

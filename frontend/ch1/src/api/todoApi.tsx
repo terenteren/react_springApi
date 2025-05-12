@@ -19,3 +19,13 @@ export const postAdd = async (todoObj: TodoAdd) => {
   const res = await axios.post(`${prefix}/`, todoObj);
   return res.data;
 };
+
+export const deleteOne = async (tno: number) => {
+  const res = await axios.delete(`${prefix}/${tno}`);
+  return res.data;
+};
+
+export const putOne = async (todoObj: TodoModify) => {
+  const res = await axios.put(`${prefix}/${todoObj.tno}`, todoObj);
+  return res.data;
+};

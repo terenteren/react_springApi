@@ -21,7 +21,7 @@ const ReadComponent = ({ tno }: { tno: number }) => {
           {makeDiv("Tno", todo.tno)}
           {makeDiv("Writer", todo.writer)}
           {makeDiv("Title", todo.title)}
-          {makeDiv("Complete", todo.complete ? "Completed" : "Not Yet")}
+          {makeDiv("Complete", todo.completed ? "Completed" : "Not Yet")}
           <div className="flex justify-end p-4">
             <button
               type="button"

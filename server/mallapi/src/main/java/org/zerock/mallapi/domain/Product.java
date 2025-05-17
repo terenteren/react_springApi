@@ -43,6 +43,10 @@ public class Product {
         this.pname = name;
     }
 
+    public void changeDel(boolean delFlag) {
+        this.delFlag = delFlag;
+    }
+
     /**
      * 상품 이미지 추가
      * @param image

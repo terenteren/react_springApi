@@ -30,7 +30,7 @@ public class TodoServiceTests {
                 .title("Test Title")
                 .content("Test Content")
                 .completed(false)
-                .dueDate(LocalDate.now().toString())
+                .dueDate(LocalDate.now())
                 .build();
 
         Long tno = todoService.register(todoDTO);

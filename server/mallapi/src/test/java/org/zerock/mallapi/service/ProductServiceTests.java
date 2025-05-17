@@ -8,6 +8,9 @@ import org.zerock.mallapi.dto.PageRequestDTO;
 import org.zerock.mallapi.dto.PageResponseDTO;
 import org.zerock.mallapi.dto.ProductDTO;
 
+import java.util.List;
+import java.util.UUID;
+
 @SpringBootTest
 @Log4j2
 public class ProductServiceTests {
@@ -22,6 +25,22 @@ public class ProductServiceTests {
         PageResponseDTO<ProductDTO> responseDTO = productService.getList(pageRequestDTO);
 
         log.info("Response DTO: " + responseDTO);
+    }
+
+    @Test
+    public void testRegister() {
+        ProductDTO productDTO = ProductDTO.builder()
+                .pname("새로운 상품")
+                .pdesc("신규 추가 상품 입니다.")
+                .price(1000)
+                .build();
+
+        productDTO.setUploadFileNames(
+                List.of(UUID.randomUUID() + "_" + "test1.jpg",
+                        UUID.randomUUID() + "_" + "test2.jpg",
+                        UUID.randomUUID() + "_" + "test3.jpg"));
+
+        productService.register(productDTO);
     }
 
 }

@@ -52,7 +52,7 @@ public class Product {
      * @param image
      */
     public void addImage(ProductImage image) {
-        image.setOrd(imageList.size() + 1);
+        image.setOrd(imageList.size());
         imageList.add(image);
     }
 

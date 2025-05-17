@@ -26,10 +26,10 @@ public class ProductDTO {
     private boolean delFlag; // 삭제 여부
 
     @Builder.Default
-    private List<MultipartFile> files = new ArrayList<>(); // 파일 리스트
+    private List<MultipartFile> files = new ArrayList<>(); // 파일 데이터
 
     @Builder.Default
-    private List<String> uploadFileNames = new ArrayList<>(); // 업로드된 파일 이름 리스트
+    private List<String> uploadFileNames = new ArrayList<>(); // 업로드된 파일 이름 리스트 (db에 저장된 파일 이름)
 
 
 }

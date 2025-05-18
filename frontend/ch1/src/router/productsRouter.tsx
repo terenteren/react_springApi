@@ -1,10 +1,12 @@
 import { lazy, Suspense } from "react";
 import { Navigate } from "react-router";
+import { loadProducts } from "../pages/products/listPage";
 
 const ProductsIndex = lazy(() => import("../pages/products/indexPage"));
 const Loading = () => <div>Products Loading....</div>;
 
 const ProductsList = lazy(() => import("../pages/products/listPage"));
+const ProductsAdd = lazy(() => import("../pages/products/addPage"));
 
 export default function productsRouter() {
   return {
@@ -18,10 +20,19 @@ export default function productsRouter() {
             <ProductsList />
           </Suspense>
         ),
+        loader: loadProducts,
       },
       {
         path: "",
         element: <Navigate to="/products/list" replace={true} />,
+      },
+      {
+        path: "add",
+        element: (
+          <Suspense fallback={<Loading />}>
+            <ProductsAdd />
+          </Suspense>
+        ),
       },
     ],
   };

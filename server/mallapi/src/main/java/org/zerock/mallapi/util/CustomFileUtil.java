@@ -72,7 +72,7 @@ public class CustomFileUtil {
                 if (contentType != null && contentType.startsWith("image/")) {
                     // 이미지 파일에 대한 추가 처리 (예: 썸네일 생성 등)
                     log.info("Image file uploaded: " + savedName);
-                    Path thumbnailPath = Paths.get(uploadPath, "thumb_" + savedName);
+                    Path thumbnailPath = Paths.get(uploadPath, "s_" + savedName);
                     Thumbnails.of(savePath.toFile()).size(200, 200).toFile(thumbnailPath.toFile()); // 200,200 사이즈 썸네일 생성
                 } else {
                     // 이미지 파일이 아닌 경우
@@ -122,7 +122,7 @@ public class CustomFileUtil {
         }
 
         fileNames.forEach(fileName -> {
-            String thumbnailName = "thumb_" + fileName; // 썸네일 파일 이름 생성
+            String thumbnailName = "s_" + fileName; // 썸네일 파일 이름 생성
 
             Path thumbnailPath = Paths.get(uploadPath, thumbnailName); // 썸네일 파일 경로
             Path filePath = Paths.get(uploadPath, fileName); // 원본 파일 경로

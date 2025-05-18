@@ -42,6 +42,7 @@ out/
 /frontend/ch1/coverage/
 
 # === server(Spring) ===
+/server/mallapi/upload/
 /server/target/
 /server/.classpath
 /server/.project

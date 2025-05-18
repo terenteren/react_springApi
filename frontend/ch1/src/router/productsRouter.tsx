@@ -1,5 +1,6 @@
 import { lazy, Suspense } from "react";
 import { Navigate } from "react-router";
+import { loadProduct } from "../pages/products/readPage";
 import { loadProducts } from "../pages/products/listPage";
 
 const ProductsIndex = lazy(() => import("../pages/products/indexPage"));
@@ -7,6 +8,7 @@ const Loading = () => <div>Products Loading....</div>;
 
 const ProductsList = lazy(() => import("../pages/products/listPage"));
 const ProductsAdd = lazy(() => import("../pages/products/addPage"));
+const ProductsRead = lazy(() => import("../pages/products/readPage"));
 
 export default function productsRouter() {
   return {
@@ -33,6 +35,15 @@ export default function productsRouter() {
             <ProductsAdd />
           </Suspense>
         ),
+      },
+      {
+        path: "read/:pno",
+        element: (
+          <Suspense fallback={<Loading />}>
+            <ProductsRead />
+          </Suspense>
+        ),
+        loader: loadProduct,
       },
     ],
   };
